@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Confirm BOM Element</h1>
+<!-- used to accept the user concent 
+    return true -> click on ok button
+    return false -> click on cancel button
+-->
+    <button onclick="handler()">Delete</button>
+
+    <script>
+        function handler() {
+            if(confirm(`Are you sure to delete the user info?`)) {
+                alert("user info deleted successfully")
+            } else {
+                alert("delete operation terminated")
+            }
+        }
+    </script>
+</body>
+</html>

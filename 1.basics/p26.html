@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Open and close BOM Elements</h1>
+
+    <button onclick="openHandler()">Open window</button>
+    <button onclick="closeHandler()">Close window</button>
+
+    <script>
+        let x;
+        function openHandler() {
+            // open(url,string,properties)
+            x = open("https://flipkart.com","sample title", "width=200;height=200;");
+        }
+
+        function closeHandler() {
+            x.close();
+        }
+    </script>
+</body>
+</html>

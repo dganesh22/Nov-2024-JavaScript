@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object Array</h1>
+
+    <script>
+        // object array
+var cars = [
+    {
+        title: "Mahindra thar",
+        make: 2023
+    },
+    {
+        title: "Toyota Etios",
+        make: 2024
+    },
+    {
+        title: "Maruti Swift",
+        make: 2022
+    }
+];
+
+    console.log(`object array = `, cars)
+
+    cars.forEach(function(item) {
+        document.write(`<h1> ${ item.title } and make = ${item.make} </h1>`)
+    })
+
+    document.write(`<h1> name = ${ cars[1].title } </h1>`)
+    document.write(`<h1> make = ${ cars[1].make } </h1>`)
+    </script>
+</body>
+</html>

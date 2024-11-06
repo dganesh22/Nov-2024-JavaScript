@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <!-- array is group of values , not mandatory to be similer data type -->
+
+
+    <script>
+        var numbers = [10,20,30,44,50,60]
+        console.log(`numbers = `, numbers)
+
+        for(let i=0; i< numbers.length; i++) {
+            document.write(`<h3> ${numbers[i]} </h3> `)
+        }
+
+
+        let users = ["john", "sam", "tom", "harry", "henry"]
+
+        for(let i=0; i< users.length; i++) {
+            document.write(`<h3> ${users[i]} </h3>`)
+        }
+
+
+        let colors = ["red", "blue", "green", "white"]
+            colors.forEach(function(item,index){
+                document.write(`<h1> ${item} </h1>`)
+            })
+</script>
+</body>
+</html>

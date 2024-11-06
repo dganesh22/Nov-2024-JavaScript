@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Parameter Return and Non-Return functions</h1>
+
+    <script>
+        function product(x,y) {
+            return x * y;
+        }
+
+        var out = product(20,30)
+        console.log(`product = `, out)
+
+        function getUser(name,email) {
+            document.write(`<h3> username is ${name}, and email is = ${email} </h3>`)
+        }
+
+        getUser("John", "john@gmail.com")
+        getUser("Sam", "sam@gmail.com")
+    </script>
+</body>
+</html>

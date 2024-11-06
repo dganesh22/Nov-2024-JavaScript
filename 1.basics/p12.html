@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array using Constructor</h1>
+
+    <script>
+        var users = new Array()
+
+        users[0] = "John"
+        users[1]= "Harry"
+        users[2] = "Tom"
+
+        console.log(`users = `, users)
+
+        users.forEach((item) => {
+            document.write(`<h1> ${item} </h1>`)
+        })
+
+        document.write(`<h2>  middle user is = ${users[1]} </h2>`)
+    </script>
+</body>
+</html>

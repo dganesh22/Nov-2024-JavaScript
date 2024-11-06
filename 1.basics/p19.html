@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>local function</h1>
+
+    <script>
+        function sum(a,b) {
+            return a + b;
+        }
+
+        document.write(`<h1> sum = ${sum(12,40)} </h1>`)
+
+        var product = (x,y) => {
+            return x * y;
+        };
+
+        document.write(`<h1> product = ${product(12,5)}  </h1>`)
+
+        var rem = function(a,b) {
+            return a % b;
+        };
+
+        document.write(`<h1> rem = ${ rem(124,3)} </h1>`)
+    </script>
+</body>
+</html>
