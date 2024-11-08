@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Methods</h1>
+    <!-- 
+        method 1. static methods
+               2. instance methods
+        property
+            1. static prop
+            2. instance prop
+    -->
+
+    <script>
+        // instance methods
+        // to store the value and remove the value to the array
+        /* 
+            push(val) -> store the value from the ending position (last in)
+            pop() -> remove the value from the end (last out)
+
+            unshift(val) - store the value from beginning position (first in)
+            shift() -> remove the value from beginning position (first out)
+
+            splice - add and remove the value from any position
+        */
+
+        var users = [];
+
+        console.log(`users=`, users)
+
+        users.push("Henry")
+        console.log(`after push =`, users)
+
+        users.push("John")
+        console.log(`after push =`, users)
+
+        users.push("Tom")
+        console.log(`after push =`, users)
+
+        users.push("Sam")
+        console.log(`after push =`, users)
+
+        console.log(`\n`)
+        
+        users.pop()
+        console.log(`pop=`, users)
+
+        users.pop()
+        console.log(`pop=`, users)
+
+        users.pop()
+        console.log(`pop=`, users)
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sorting the users based on their age group</h1>
+
+    <script>
+            var users = [
+                { name: "John", age: 20 },
+                { name: "Sam", age: 21},
+                { name: "Arnav", age: 26},
+                { name: "Rahul", age: 21},
+                { name: "Mike", age: 20},
+                { name: "Tom", age: 26},
+                { name: "Ali", age: 27},
+                { name: "Sara", age: 30}
+            ]
+
+            console.log(`before =` , users)
+
+            function group(arr,ref) {
+                return arr.reduce(function(ac,cu){
+                    let val = cu[ref] // cu['age']
+
+                    if(!ac[val]) {
+                        ac[val] = [] // empty array based on age group
+                    }
+
+                    // push the user name to the ac
+                    ac[val].push(cu)
+                    return ac;
+                }, {})
+            }
+
+            let out =  group(users,"age")
+
+            console.log(`output = `, out)
+    </script>
+</body>
+</html>

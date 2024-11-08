@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> sort </h1>
+    <script>
+        var nums = [14,52,63,12,43,95,74,68,19,11,5,85]
+
+        console.log(`before = `, nums)
+
+        let asc = nums.sort(function(a,b){
+            console.log(`a = ${a} and b = ${b}`)
+            return a - b
+        })
+
+        console.log(`asc = `, asc)
+
+        let dsc = nums.sort(function(a,b){
+            console.log(`a = ${a} and b = ${b}`)
+            return b - a
+        })
+
+        console.log(`dsc = `, dsc)
+    </script>
+</body>
+</html>

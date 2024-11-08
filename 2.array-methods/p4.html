@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>find and filter</h1>
+
+     <script>
+            var users = [
+                {
+                    id:1,
+                    first: "John",
+                    last: "David",
+                    email: "johndavid@gmail.com"
+                },
+                {
+                    id: 2,
+                    first: "Ali",
+                    last: "sharma",
+                    email: "alisharma@gmail.com"
+                },
+                {
+                    id: 3,
+                    first: "John",
+                    last: "henry",
+                    email: "johnhenry@gmail.com"
+                }
+            ]
+
+            console.log(`users=`, users)
+
+            // array.find(function(item){}) -> return single object
+
+            let res1 = users.find(function(val){
+                return val.id === 2
+            });
+
+            console.log(`find `, res1) 
+
+            // array.filter(function(val){}) - array of objects
+
+            let res2 = users.filter(function (val) {
+                return val.first === "John"
+            })
+
+            console.log(`filter =`, res2)
+     </script>
+</body>
+</html>
