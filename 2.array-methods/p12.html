@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array.every() // array.some() </h1>
+
+    <script>
+            let age = [18,21,1,11,51,18,21,5,18,7,10];
+
+            function check(age) {
+                return age >= 18
+            }
+
+            let res1  = age.every(check);
+                console.log(`every = `, res1) // false
+
+                let ageGroup1 = [18,19,20,42,32]
+            
+            let res2 = ageGroup1.every(check)
+                console.log(`every =`, res2) // true
+
+            let res3 = age.some(check) // true
+
+            let ageGroup2 = [12,14,11,6,5,4]
+            let res4 = ageGroup2.some(check) // false
+
+            console.log(`some = `, res3)
+            console.log(`some = `, res4)
+            
+    </script>
+</body>
+</html>
