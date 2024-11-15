@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>finding prime number using map</h1>
+
+    <script>
+         var arr = [10, 24, 50, 60, 70, 35, 6, 7, 39, 59, 90, 32, 2, 3, 9, 11];
+
+         function isPrime(num) {
+            if(num < 2) return false;
+
+            for(let i=2; i< num; i++) {
+                if(num % i == 0) {
+                    return false
+                }
+            }
+            return true;
+         }
+
+         let prime = [];
+         let nonprime = [];
+
+         arr.map(function(item,index){
+            let val = isPrime(item)
+                if(val){
+                    prime.push(item)
+                } else {
+                    nonprime.push(item)
+                }
+         })
+
+         console.log(`prime = `, prime)
+         console.log(`non prime = `, nonprime)
+    </script>
+</body>
+</html>

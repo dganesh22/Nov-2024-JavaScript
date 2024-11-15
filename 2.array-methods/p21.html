@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array.flat()</h1>
+    <script>
+        // returns new array with all sub array elements concatinated into the primary array
+
+        var nums = [1,2,3,[4,5,6,[7,8,[9,10]]]]
+
+        console.log(`nums = `, nums)
+        console.log(`nums = `, nums.flat(1))
+        console.log(`nums = `, nums.flat(2))
+        console.log(`nums = `, nums.flat(3))
+
+        var nums1 = [1,2,3,[4,5,6,[7,8,[9,10,[11,12,[13,14]]]]]]
+
+        console.log(`nums1`, nums1)
+        console.log(`nums1 `, nums1.flat(Infinity))
+    </script>
+</body>
+</html>
