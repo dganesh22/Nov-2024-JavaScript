@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Max number in an array</h1>
+
+    <script>
+            var arr = [10,30,5,3,24,45,3,11,123,34,88,42]
+
+            let temp =0;
+
+            arr.forEach(function(val,index) {
+                console.log(`val = `, val , " , index =", index)
+                if(temp < val) {
+                     temp = val;
+                }
+            })
+
+            console.log(`max number = `, temp)
+    </script>
+</body>
+</html>

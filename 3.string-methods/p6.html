@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>string reverse</h1>
+
+     <script>
+         var inp = "HelloWorld"
+
+         console.log(`str=`, inp)
+         console.log(`str length=`, inp.length)
+
+         console.log(`str split=`, inp.split(""))
+         console.log(`str split reverse=`, inp.split("").reverse())
+         console.log(`str split reverse & join =`, inp.split("").reverse().join(""))
+
+
+         // using function and conditional statement
+         function revStr(val) {
+            let out = "";
+            
+            val.forEach(item => {
+                out += item;
+            });
+            console.log(`output =`, out)
+         }
+
+         revStr(inp.split("").reverse())
+
+     </script>
+</body>
+</html>

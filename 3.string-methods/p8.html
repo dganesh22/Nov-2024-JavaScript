@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>localeCompare -> lexicographical comparision</h1>
+
+    <script>
+         var x = "Hello"
+        var y = "World"
+        var z = "Hello"
+
+        console.log(`Hello < World = `, x.localeCompare(y))        
+        console.log(`Wolrd > Hello = `, y.localeCompare(z))        
+        console.log(`Hello === Hello = `, x.localeCompare(z))        
+    </script>
+</body>
+</html>
