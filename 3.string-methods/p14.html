@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>match and matchAll()</h1>
+
+	<script>
+		 var msg = "JavaScript is frontend programming language"
+		 var exp = /programming/; // /regularexpression/
+
+		 var res = msg.match(exp)
+		 console.log('output =', res)
+
+
+		 // Matchall
+            var msg1 = "javascript is web SCRIPTING language, and also can be used as a server Script too.";
+
+           var exp1 = /script/gi; // gi -> global case insensitive
+           var out1 = msg1.matchAll(exp1)
+
+           console.log(' match all =', out1)
+
+           for(let item of out1) {
+           	console.log('match all =', item)
+           }
+	</script>
+</body>
+</html>

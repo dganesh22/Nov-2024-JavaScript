@@ -26,7 +26,8 @@
          let nonprime = [];
 
          arr.map(function(item,index){
-            let val = isPrime(item)
+            let val = isPrime(item) // return boolean results 
+            console.log(` ${item} val =`, val)
                 if(val){
                     prime.push(item)
                 } else {
