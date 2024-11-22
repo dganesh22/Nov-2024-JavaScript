@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Open and Close</h1>
+
+    <button id="open">Open Tab</button> 
+    <button id="cls">Close Tab</button>
+
+    <script>
+        var btnopen = document.getElementById("open")
+        var btncls = document.getElementById("cls")
+
+        var temp;
+
+        btnopen.addEventListener("click", function(){
+            // open(file,path,url)
+           temp = open("https://google.com")
+        })
+        btncls.addEventListener("click", function(){
+            temp.close()
+        })
+    </script>
+</body>
+</html>

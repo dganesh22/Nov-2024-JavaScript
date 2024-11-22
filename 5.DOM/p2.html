@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>document.getElementById(id)</h1>
+
+     <button id="btn">Click me</button>
+
+
+     <hr>
+
+     <img src="https://picsum.photos/id/123/400/400" alt="no pic" id="image">
+
+     <script>
+            document.getElementById("btn").onclick = function(){
+                document.getElementById("btn").innerText = "loading... pls wait.."
+            };
+
+            document.getElementById("image").onclick = function(){
+                document.getElementById("image").src = "https://picsum.photos/id/234/400/400";
+            };
+     </script>
+</body>
+</html>

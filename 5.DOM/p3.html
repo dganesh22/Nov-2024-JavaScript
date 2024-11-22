@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>innerHTML property</h1>
+
+     <button id="btn">Click Me</button>
+
+     <div id="blk"></div>
+
+     <script>
+        var btn = document.getElementById("btn")
+        var blk = document.getElementById("blk")
+
+        btn.onclick = function() {
+            blk.innerHTML = `<h1>Welcome to Heading</h1>`;
+            blk.style.color = "white";
+            blk.style.backgroundColor = "red";
+            blk.style.padding = "20px";
+        };
+     </script>
+</body>
+</html>
