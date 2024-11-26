@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>document.querySelector(selector)</h1>
+    <!-- selector property which targets (class/id/html-tag) -->
+
+    <h1>targeting html tag</h1>
+
+    <button id="btn">Click Me</button>
+
+    <section>
+            <div>block-1</div>
+            <div id="p2">block-2</div>
+            <div class="b3">block-3</div>
+    </section>
+
+    <script>
+        var btn = document.querySelector("#btn");
+         var blk = document.querySelector("div");
+         var b3 = document.querySelector(".b3");
+         var p2 = document.querySelector("#p2");
+
+            btn.onclick = function() {
+                blk.innerHTML = `<h1>Welcome to HTML</h1>`;
+                b3.innerHTML = `<h1>Welcome to class target</h1>`;
+                p2.innerHTML = `<h1>Welcome to id target</h1>`;
+            };
+    </script>
+</body>
+</html>

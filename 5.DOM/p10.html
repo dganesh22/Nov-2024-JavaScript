@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>getElementsByTagName(html tag)</h1>
+
+    <button id="btn">Click me</button>
+    <div>
+        <p>sample para</p>
+        <p>sample para</p>
+        <p>sample para</p>
+        <p>sample para</p>
+        <p>sample para</p>
+        <p>sample para</p>
+        <p>sample para</p>
+        <h3>sample heading</h3>
+        <p>sample para</p>
+        <p>sample para</p>
+        <p>sample para</p>
+    </div>
+
+    <script>
+        var btn = document.querySelector("#btn");
+
+        var para = document.getElementsByTagName("p"); // array of html collections
+
+            btn.onclick = function() {
+                this.innerText = "btn clicked";
+                console.log(`para =`, para);
+                console.log(`length = `, para.length);
+
+                for(let i=0; i < para.length; i++) {
+                    para[i].style.color = "red";
+                    para[i].style.fontWeight = "bold";
+                    para[i].style.textDecoration = "underline";
+                    para[i].style.textAlign = "center";
+                }
+            };
+    </script>
+</body>
+</html>

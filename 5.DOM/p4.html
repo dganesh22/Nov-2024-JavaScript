@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #out {
+            width: 50%;
+            padding: 20px;
+            border: 2px solid #222;
+        }
+    </style>
 </head>
 <body>
     <h1>Task based on id </h1>
@@ -16,5 +23,28 @@
         print the total marks in h1 tag and 
         average h3 tag in the block
       -->
+
+      <button id="res">Result</button>
+
+      <div id="out"></div>
+
+      <script>
+            var res = document.getElementById("res")
+            var out = document.getElementById("out")
+
+            var john = 87;
+            var tom = 56;
+            var sam = 96;
+
+            res.onclick = function() {
+                let total = john + tom + sam;
+                let avg = total / 3;
+
+                out.innerHTML = `<section>
+                        <h1> Total marks = ${total} </h1>
+                        <h1> Avg marks = ${avg} </h1>
+                    </section>`;
+            };
+      </script>
 </body>
 </html>

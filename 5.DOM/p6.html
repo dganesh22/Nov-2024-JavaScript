@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CreateElement and textContent </h1>
+
+    <button id="btn">Click me</button>
+
+    <section id="blk"></section>
+
+    <script>
+         var blk = document.getElementById('blk');
+         var btn = document.getElementById("btn");
+
+         btn.addEventListener("click", function(){
+             // to create custom html tags
+             var t1 = document.createElement("h1");
+             var p1 = document.createElement("p");
+             var im = document.createElement("img")
+
+
+             // add the text content
+             t1.textContent = "Welcome to JavaScript";
+             p1.textContent = "this is sub text content of paragraph.";
+             im.src = "https://picsum.photos/300/300"
+
+             // append the created tags with content to the block
+             blk.appendChild(t1);
+             blk.appendChild(p1);
+             blk.appendChild(im);
+         });
+    </script>
+</body>
+</html>

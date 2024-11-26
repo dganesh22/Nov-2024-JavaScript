@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>document.getElementById() - events</h1>
+
+      <button id="show">Show Alert</button>
+
+      <script>
+         var sBtn = document.getElementById("show");
+
+         sBtn.onclick = function() {
+            this.innerText = "btn clicked.."
+            alert("event called with dom property")
+         };
+      </script>
+</body>
+</html>

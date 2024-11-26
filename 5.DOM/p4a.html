@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task -1</h1>
+
+    <button id="btnTotal">Total</button>
+    <button id="btnAvg">Average</button>
+
+    <div id="result1"></div>
+    <div id="result2"></div>
+
+    <script>
+        var bTotal = document.getElementById("btnTotal")
+        var bAvg = document.getElementById("btnAvg")
+
+        var r1 = document.getElementById("result1")
+        var r2 = document.getElementById("result2")
+
+        var a = 12;
+        var b = 24;
+        var c = 34;
+        var total = a + b + c;
+        var avg =  total / 3;
+
+        bTotal.onclick = function() {
+            r1.innerHTML = `<h1> total marks = ${total} </h1>`
+        }
+        bAvg.onclick = function() {
+            r2.innerHTML = `<h1> avg marks = ${avg} </h1>`
+        }
+    </script>
+</body>
+</html>

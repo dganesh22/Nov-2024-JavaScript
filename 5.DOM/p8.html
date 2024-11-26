@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>getElementById().value</h1>
+
+    <form id="contact" method="post">
+        <div>
+            <label for="user">Enter name</label>
+            <input type="text" name="user" id="user" required>
+        </div>
+        <div>
+            <label for="mail">Enter email</label>
+            <input type="email" name="mail" id="mail" required>
+        </div>
+        <div>
+            <label for="pass">Enter password</label>
+            <input type="password" name="pass" id="pass" required>
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script>
+        var cform = document.getElementById("contact");
+        var fuser = document.getElementById("user");
+        var fmail = document.getElementById("mail");
+        var fpass = document.getElementById("pass");
+
+        cform.addEventListener("submit", function(event){
+            event.preventDefault(); // to avoid page refresh
+            // object format
+            let data = {
+                username : fuser.value,
+                email: fmail.value,
+                password: fpass.value
+            };
+
+            console.log(`user =`, data);
+        });
+    </script>
+</body>
+</html>

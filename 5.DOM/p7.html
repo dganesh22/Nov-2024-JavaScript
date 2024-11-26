@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>getElementById().value</h1>
+
+    <form id="contact" method="post">
+        <div>
+            <label for="user">Enter name</label>
+            <input type="text" name="user" id="user" required>
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script>
+        var cform = document.getElementById("contact");
+        var fuser = document.getElementById("user");
+
+        cform.addEventListener("submit", function(event){
+            event.preventDefault(); // to avoid page refresh
+            console.log(`username =`, fuser.value);
+        });
+    </script>
+</body>
+</html>

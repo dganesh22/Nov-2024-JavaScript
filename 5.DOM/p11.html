@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>getElementsByClassName</h1>
+
+    <form method="post" id="opt">
+        <label><input type="checkbox" name="c1" id="c1" class="list" value="html">HTML</label>
+        <label><input type="checkbox" name="c2" id="c2" class="list" value="css">Css</label>
+        <label><input type="checkbox" name="c3" id="c3" class="list" value="js">JavaScript</label>
+        <label><input type="checkbox" name="c4" id="c4" class="list" value="react">React</label>
+        <label><input type="checkbox" name="c5" id="c5" class="list" value="java">Java</label>
+        <label><input type="checkbox" name="c6" id="c6" class="list" value="python">Python</label>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <script>
+        var fOpt = document.querySelector("#opt");
+        var el = document.getElementsByClassName("list")
+
+        var selected = [];
+
+        fOpt.onsubmit = function(event) {
+            event.preventDefault();
+            console.log(`class =` , el)
+
+            for(let i=0; i < el.length; i++) {
+                if(el[i].checked) {
+                    selected.push(el[i].value)
+                    el[i].style.border = "none";
+                    el[i].style.outline = "2px solid green";
+                }
+            }
+
+            console.log(`selected = `, selected)
+        }
+    </script>
+</body>
+</html>
