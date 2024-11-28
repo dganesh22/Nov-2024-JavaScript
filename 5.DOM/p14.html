@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>document.querySelectorAll</h1>
+
+    <p>para content</p>
+    <p>para content</p>
+    <p>para content</p>
+
+    <hr>
+
+    <div class="b1">block</div>
+    <div class="b1">block</div>
+    <div class="b1">block</div>
+    <div class="b1">block</div>
+
+    <hr>
+
+    <section id="txt">Section</section>
+    <section id="txt">Section</section>
+    <section id="txt">Section</section>
+    <section id="txt">Section</section>
+    <section id="txt">Section</section>
+
+    <script>
+         var s1 = document.querySelectorAll('p')
+         var s2 = document.querySelectorAll('.b1')
+         var s3 = document.querySelectorAll('#txt')
+
+         console.log(`para =`, s1)
+         console.log(`class =`, s2)
+         console.log(`id =`, s3)
+    </script>
+</body>
+</html>

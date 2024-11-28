@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM siblings</h1>
+
+    <div>
+        <p>sample para 1</p>
+        <p>sample para 2</p>
+        <p>sample para 3</p>
+        <p>sample para 4</p>
+        <p class="fifth">sample para 5</p>
+    </div>
+
+    <script>
+        var first = document.querySelector("p");
+
+        console.log(`first node =`, first);
+
+        // parentElement
+        console.log(first.parentElement) // div
+        console.log(first.parentElement.parentElement) // body
+        console.log(first.parentElement.parentElement.parentElement) // html
+        console.log(first.parentElement.parentElement.parentElement.parentElement) // null
+
+        console.log(`\n`)
+        // childrens
+        
+        var dEl = document.querySelector("div")
+            console.log(dEl.children)
+            console.log(dEl.children[0])
+            console.log(dEl.children[1])
+            console.log(dEl.children[2])
+            console.log(dEl.children[3])
+            console.log(dEl.children[4])
+            console.log(dEl.children[4].innerText)
+
+        console.log(`\n`)
+
+        // nextElementSibling
+        console.log(first.nextElementSibling)
+        console.log(first.nextElementSibling.nextElementSibling)
+        console.log(first.nextElementSibling.nextElementSibling.nextElementSibling)
+        console.log(first.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling)
+
+
+        console.log(`\n`)
+        // previousElementSibling
+        var fEl = document.querySelector('.fifth')
+            console.log(fEl)
+            console.log(fEl.previousElementSibling)
+            console.log(fEl.previousElementSibling.previousElementSibling)
+            console.log(fEl.previousElementSibling.previousElementSibling.previousElementSibling)
+
+        console.log(`\n`)
+
+        // firstElementChild and lastElementChild
+        console.log(dEl.firstElementChild)
+        console.log(dEl.lastElementChild)
+    </script>
+</body>
+</html>
