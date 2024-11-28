@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>document.createTextNode()</h1>
+    <!-- a string containing data to be put in the text node -->
+
+    <button onclick="addTextNode('yes!..')">Yes</button>
+    <button onclick="addTextNode('no!..')">No</button>
+
+    <p id="out">First line of paragraph</p>
+
+    <script>
+        function addTextNode(txt) {
+            let newTxt = document.createTextNode(txt);
+            let p1 = document.getElementById("out")
+            p1.appendChild(newTxt)
+        }
+    </script>
+</body>
+</html>

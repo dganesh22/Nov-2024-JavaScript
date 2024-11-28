@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>document.hasFocus()</h1>
+
+    <p id="log">Focus check results area:</p>
+
+    <button id="btn">Open new window</button>
+
+    <script>
+        let body = document.querySelector("body")
+        let log = document.getElementById('log')
+
+        document.getElementById("btn").onclick = function(){
+            open('https://google.com', "new window", "height=400;width=400")
+        }
+
+        function checkFocus() {
+            if(document.hasFocus()) {
+                log.textContent = "this document has focus"
+                body.style.backgroundColor = "#fff"
+            } else {
+                log.textContent = "this document doesn't have focus"
+                body.style.backgroundColor = "#aaa"
+            }
+        }
+
+        setInterval(checkFocus,1000)
+    </script>
+</body>
+</html>

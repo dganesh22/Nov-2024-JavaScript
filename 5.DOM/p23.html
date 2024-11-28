@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            background-color: red;
+        }
+
+        .circle {
+            border-radius: 50%;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>classList</h1>
+<!-- add, remove, toggle -->
+    <div></div>
+
+    <button id="add">Add classlist</button>
+    <button id="rem">Remove classlist</button>
+    <button id="tog">Toggle classlist</button>
+
+    <script>
+        let dEl = document.querySelector("div")
+
+        document.getElementById("add").onclick = function(){
+            dEl.classList.add("circle")
+        }
+        document.getElementById("rem").onclick = function(){
+            dEl.classList.remove("circle")
+        }
+        document.getElementById("tog").onclick = function(){
+            dEl.classList.toggle("circle")
+        }
+    </script>
+</body>
+</html>
