@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>setAttribute(name,value) and removeAttribute(name)</h1>
+
+    <div id="blk">
+        <img src="https://picsum.photos/id/244/500/500" alt="no image">
+    </div>
+
+
+    <button id="setBtn">Set</button>
+    <button id="remBtn">Remove</button>
+
+    <script>
+        let image = document.querySelector("img")
+        let sBtn = document.getElementById("setBtn")
+        let rBtn = document.getElementById("remBtn")
+
+        sBtn.onclick = function() {
+            image.setAttribute("width", "200")
+            image.setAttribute("height", "200")
+        }
+        rBtn.onclick = function() {
+            image.removeAttribute("width")
+            image.removeAttribute("height")
+        }
+    </script>
+</body>
+</html>

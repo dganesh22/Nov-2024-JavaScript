@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #blk {
+            width: 100px;
+            height: 100px;
+            background-color: rebeccapurple;
+            transition: all 1s;
+        }
+    </style>
+</head>
+<body>
+    <h1>mouse event onmousemove</h1>
+
+    <div id="blk"></div>
+
+    <script>
+        let blk = document.getElementById("blk")
+        blk.onmousemove = function() {
+            blk.style.borderRadius = "50%";
+        };
+    </script>
+</body>
+</html>

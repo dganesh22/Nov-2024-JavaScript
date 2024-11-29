@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Keyboard events</h1>
+    <!-- 
+        onkeyup - no delay
+        onkeydown - one key of delay
+        onkeypress - (deprecated)
+    -->
+
+    <form>
+        <div>
+            <label for="user">Enter username</label>
+            <input type="text" name="user" id="user" onkeydown="readName()" required>
+        </div>
+    </form>
+
+    <hr>
+
+    <h1 id="out"></h1>
+
+    <script>
+        function readName() {
+            var user = document.getElementById("user")
+             document.getElementById("out").innerText  = user.value;
+        }
+    </script>
+</body>
+</html>

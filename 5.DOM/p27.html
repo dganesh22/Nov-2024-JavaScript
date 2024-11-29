@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>document.cookie</h1>
+    <!-- browser variables  -->
+
+    <div>
+        <label for="user">Enter username</label>
+        <input type="text" name="user" id="user" required>
+    </div>
+
+    <button id="set">set cookie</button>
+    <button id="rem">clear cookie</button>
+
+    <hr>
+    <h1 id="out"></h1>
+
+    <script>
+        let sBtn = document.getElementById("set")
+        let rBtn = document.getElementById("rem")
+        let out = document.getElementById("out")
+        let fUser = document.getElementById("user")
+
+
+        // set cookie
+        sBtn.onclick = function() {
+            // document.cookie = `name=${value};properties;`
+            document.cookie = `username=${fUser.value};expires=30 Nov 2024 10:30:00 AM GMT+5.30;SameSite=None;Secure=true`;
+            alert("cookie set successfully")
+        }
+
+        //remove cookie
+        rBtn.onclick = function() {
+            if(confirm("Are you sure to delete cookie?")) {
+                let today = new Date(); // current date and time
+                today.setTime(today.getTime() - 1); // past time
+
+                document.cookie = `username=;expires=${today.toGMTString()}`;
+                alert("cookie cleared successfully")
+            }
+        }
+
+
+        // read 
+        function readHandler() {
+            if(document.cookie) {
+                console.log(`cookie data = `, document.cookie);
+                let res = document.cookie.split('=');
+                out.innerText = `cookie name = ${res[0]} and value = ${res[1]}`;
+            } else {
+                out.innerText = "No cookie found";
+            }
+        }
+
+        setInterval(readHandler,5000)
+    </script>
+</body>
+</html>
