@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            height: 100vh;
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+<body oncontextmenu="contextHan(event)">
+    <h1>oncontext</h1>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur atque a aspernatur labore expedita blanditiis iste sit! Tempore ullam labore repellendus alias magni, ipsam magnam consectetur perferendis laboriosam quam ratione?</p>
+    </div>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ut animi voluptatum corporis unde provident dolor nobis blanditiis aut! Numquam laborum tempore quasi quae ipsa veniam tempora et accusantium saepe.</p>
+    </div>
+
+    <script>
+         function contextHan(e) {
+            e.preventDefault();
+            alert("Right click is disabled..")
+         }
+    </script>
+</body>
+</html>

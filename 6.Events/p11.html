@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form events</h1>
+    <!-- onsubmit and onreset -->
+     <form method="post" onsubmit="submitHan(event)" onreset="clearHan(event)">
+        <div>
+            <label for="user">Your username</label>
+            <input type="text" name="user" id="user" required>
+        </div>
+
+        <div>
+            <label for="pass">Your Password</label>
+            <input type="password" name="pass" id="pass" required>
+        </div>
+
+        <div>
+            <input type="submit" value="Login">
+            <input type="reset" value="Clear">
+        </div>
+     </form>
+
+     <script>
+        let fUser = document.getElementById("user")
+        let fPass = document.getElementById("pass")
+
+            function submitHan(e) {
+                e.preventDefault(); // avoid page refresh
+                console.log('submit')
+                let data = {
+                    username: fUser.value,
+                    password: fPass.value
+                }
+                console.log(`user data = `, data)
+            }
+
+            function clearHan(e) {
+                console.log('cleared')
+            }
+     </script>
+</body>
+</html>
