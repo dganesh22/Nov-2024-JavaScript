@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>pointer events</h1>
+    <!-- 
+        onpointerenter
+        onpointerleave
+        onpointermove
+        onpointerout
+        onpointerover
+        onpointerdown
+        onpointerup
+        onpointercancel
+    -->
+
+    <div id="blk" onpointerenter="handler1()" onpointerleave="handler2()">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime distinctio dolorum amet unde neque sapiente tempore laborum illo, rem sed deserunt explicabo fugit nemo, vero aspernatur molestiae et officiis necessitatibus.
+    </div>
+
+    <script>
+        let blk = document.getElementById("blk")
+
+        function handler1() {
+            blk.style.backgroundColor = "green";
+            blk.style.padding = "10px";
+        }
+        
+        function handler2() {
+            blk.style.backgroundColor = "orange";
+            blk.style.padding = "10px";
+        }
+
+
+    </script>
+</body>
+</html>

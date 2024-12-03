@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>radio</h1>
+
+    <form autocomplete="off" onsubmit="handler(event)">
+        <div>
+            <label for="gender">Your Gender</label>
+            <div>
+                <input type="radio" name="gender" id="gender" value="male"> Male
+                <input type="radio" name="gender" id="gender" value="female"> Female
+                <input type="radio" name="gender" id="gender" value="transgender"> Transgender
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <script>
+        let gender = document.getElementsByName("gender")
+
+        function handler(e) {
+            e.preventDefault();
+            console.log(`gender =`, gender)
+            gender.forEach(item => {
+                if(item.checked) {
+                    console.log(`selected value = `, item.value)
+                }
+            });
+        }
+    </script>
+</body>
+</html>

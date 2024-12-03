@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check box</h1>
+
+    <form autocomplete="off">
+        <div>
+            <label for="agree">Terms and Conditions</label>
+            <label>
+                <input type="checkbox" name="agree" id="agree" onchange="handler()" required> 
+                I agree for all terms and conditions..
+            </label>
+            <p id="status"></p>
+        </div>
+    </form>
+
+    <script>
+        let ag = document.getElementById("agree")
+        let status = document.getElementById("status")
+
+        function handler() {
+            status.innerText = `status = ${ag.checked}`;
+        }
+    </script>
+</body>
+</html>
