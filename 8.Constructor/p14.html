@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Parameter custom constructor</h1>
+
+    <script>
+         function Product(a,b) {
+            this.x = a;
+            this.y = b;
+            this.calc = function() {
+                return this.x * this.y
+            }
+         }
+
+         var p = new Product(10,12)
+         console.log(`result = `, p.calc())
+
+         var p = new Product(22,10)
+         console.log(`result = `, p.calc())
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> test() </h1>
+
+    <form autocomplete="off" method="post" onsubmit="handler(event)">
+        <div>
+            <label for="">Your Input</label>
+            <input type="text" name="inp" id="inp" required>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <script>
+        function handler(e) {
+            e.preventDefault();
+            var x = document.getElementById('inp').value; // input
+            console.log(`input =`, x)
+        var reg = /Abhishek/; // regex
+
+        if(reg.test(x)) {
+            console.log(`matches`)
+        } else {
+            console.log(`not matches`)
+        }
+        }
+    </script>
+</body>
+</html>

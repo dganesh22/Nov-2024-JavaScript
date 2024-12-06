@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object Constructor</h1>
+    <script>
+        // direct declaration
+        var user = {
+            // key:value,
+            name: "sam",
+            email: "sam@gmail.com",
+            age: 24,
+            isUser: false
+        };
+
+        console.log(`object=`, user);
+
+        // object defining through constructor - assignment method
+        var user1  = new Object();
+            user1.name = "John";
+            user1.email = "john@gmail.com";
+            user1.age = 22;
+            user1.isUser = true;
+
+        console.log(`user1 = `, user1)
+
+        // object defining through constructor - parameter method
+
+        var user2 = new Object({ name: "Mary", email: "mary@gmail.com", age: 23, isUser: false })
+
+        console.log(`user2 = `, user2)
+    </script>
+</body>
+</html>

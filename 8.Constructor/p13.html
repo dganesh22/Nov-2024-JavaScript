@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Custom Constructor</h1>
+    <script>
+        /* 
+            1. constructor follows the function structure
+            2. first letter of the constructor uppercase (not mandatory)
+            3. constructor can't return
+            4. properties of constructor create using this keyword
+        */
+
+        function Car() {
+            this.title = "Mahindra thar";
+            this.color = "red";
+            this.make = 2024;
+        }
+
+        // ref
+        let x = new Car()
+         console.log(`ref = ` , x)
+
+         document.write(`<h1> title = ${ x.title } </h1>`)
+         document.write(`<h1> color = ${ x['color'] } </h1>`)
+         document.write(`<h1> make = ${ x.make } </h1>`)
+    </script>
+</body>
+</html>

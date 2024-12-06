@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>exec method</h1>
+    <p>It returns an array of captures or null if there is no match </p>
+
+    <script>
+        var str = "Welcome to javascript.Today we are leaning JavaScript regular expressions.Javascript is a fun. JAVASCRIPT compiler is embbeded in browser."
+
+        var reg = /javascript/gi;
+
+        var test = reg.exec(str)
+        if(test) {
+            console.log(`test = `, test)
+            console.log(`str= `, str.replace(/javascript/gi, "js"))
+        } else {
+            console.log(test)
+        }   
+    </script>
+</body>
+</html>
