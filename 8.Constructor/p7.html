@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Number Constructor</h1>
+    <script>
+        // all datatype of values into number
+
+        var x = "1232";
+        console.log(`x = `, x)
+        console.log(`x = `, typeof x)
+
+        console.log(`\n`)
+
+        var z = Number(x)
+        console.log(`z =` , z)
+        console.log(`z =` , typeof z)
+
+        //boolean to number
+        console.log(`\n`)
+
+            console.log(`boolean =`, Number(true)) // 1
+            console.log(`boolean =`, Number(false)) // 0
+
+        console.log(`\n`)
+
+        // date object => milliseconds
+            console.log(`date =`, Number(new Date()))// 
+        
+        console.log(`\n`)
+            console.log(`max-value = `, Number.MAX_VALUE)
+            console.log(`min-value = `, Number.MIN_VALUE)
+
+        console.log(`\n`)
+            console.log(`-infinity = `, Number.NEGATIVE_INFINITY)
+            console.log(`infinity =`, Number.POSITIVE_INFINITY)
+    </script>
+</body>
+</html>

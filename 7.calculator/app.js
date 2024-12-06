@@ -23,17 +23,34 @@ for(let item of keys) {
             // clear input
             inTxt.textContent = "";
         } else if (inp === "BS") {
-            // remove values of input one by one
+            // remove values of input one by one from the last position
+            let x = inTxt.innerText.slice(0,-1)
+            inTxt.textContent = x;
         } else if (inp === "=") {
             // calculation
             let res = eval(inTxt.innerText)
             outTxt.innerText = res;
         } else if (inp === "Exp") {
-
+            if(!isNaN(inTxt.innerText)) {
+                let res = Math.exp(inTxt.innerText)
+                outTxt.textContent = res;
+            } else {
+                outTxt.textContent = "Input is Not a Number"
+            }
         } else if (inp === "Cbrt") {
-
+            if(!isNaN(inTxt.innerText)) {
+                let res = Math.cbrt(inTxt.innerText)
+                outTxt.textContent = res;
+            } else {
+                outTxt.textContent = "Input is Not a Number"
+            }
         } else if (inp === "Sqrt") {
-
+            if(!isNaN(inTxt.innerText)) {
+                let res = Math.sqrt(inTxt.innerText)
+                outTxt.textContent = res;
+            } else {
+                outTxt.textContent = "Input is Not a Number"
+            }
         }else {
             // print the input 
             inTxt.textContent += inp;

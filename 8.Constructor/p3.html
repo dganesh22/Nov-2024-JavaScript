@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .clock {
+            padding: 20px;
+            background-color: orange;
+            color: #fff;
+            font-size: 1.2rem;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digital Clock</h1>
+
+    <section class="container">
+        <div class="clock"></div>
+    </section>
+
+    <script>
+
+         var clk = document.querySelector(".clock");
+
+         function display() {
+            let x = new Date()
+            clk.innerHTML = `<strong> ${x.toLocaleTimeString()} </strong>`;  
+         }
+
+         setInterval(display,1000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String methods in Date Constructor</h1>
+
+    <script>
+        var x = new Date();
+        console.log(`x = `, x)
+
+        document.write(`<h3> date = ${x} </h3>`)
+        document.write(`<h3> date = ${x.toDateString()} </h3>`)
+        document.write(`<h3> locale date = ${x.toLocaleDateString()} </h3>`)
+
+        document.write(`<h3> time = ${ x.toTimeString() } </h3>`)
+        document.write(`<h3>locale time = ${ x.toLocaleTimeString() } </h3>`)
+    </script>
+</body>
+</html>

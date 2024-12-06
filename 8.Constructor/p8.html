@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>parseInt and parseFloat</h1>
+
+    <script>
+         var x= 123.3434343;
+
+         console.log(`x =`, x)
+         console.log(`x =`, x.toExponential()) // string
+         console.log(`x =`, x.toFixed(2)) // string
+         console.log(`x =`, x.toPrecision(2)) // string
+
+         console.log(`\n`)
+
+         console.log(`value of =`, x.valueOf()) 
+
+         console.log(`\n`)
+
+         // any value to integer
+         console.log(`int =`, parseInt(x))
+         console.log(`float =`, parseFloat(x))
+
+         var str = "3.5 month"
+
+         console.log(`str = `, str)
+         console.log(`str = `, parseFloat(str))
+         console.log(`str = `, parseInt(str))
+
+         console.log(`\n`)
+
+         console.log(`math.min() =`, Math.min()) // Infinity
+         console.log(`math.max() =`, Math.max()) // -Infinity
+    </script>
+</body>
+</html>
