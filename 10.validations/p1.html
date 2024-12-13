@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .body {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
+            overflow-x: hidden;
+        }
+
+        .box {
+            width: 100%;
+            border: 2px solid #ccc;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-item {
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px;
+            line-height: 3;
+        }
+
+        .form-input {
+            padding: 12px 14px;
+            width: 300px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .btn {
+            padding: 8px 10px;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            width: 150px;
+            color: #fff;
+            transition: all 0.4s;
+        }
+        .success { background-color: green;}
+        .btn:hover { background-color: #111;}
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="title">
+        <h1>Validating Name</h1>
+    </div>
+    <div class="box">
+         <form autocomplete="off" method="post" onsubmit="submitHandler(event)">
+            <div class="form-item">
+                <label for="user">Your Name</label>
+                <input type="text" name="user" id="user" class="form-input" required>
+                <strong id="status"></strong>
+            </div>
+            <div class="form-item">
+                <input type="submit" value="Submit" class="btn success">
+            </div>
+         </form>
+    </div>
+   </div>
+
+   <script>
+        let fuser = document.getElementById("user");
+        let status = document.getElementById("status");
+
+        function submitHandler(e) {
+            e.preventDefault();
+            let user = fuser.value;
+            console.log(`username = `, user)
+
+            //reg
+            // let regex = /^[A-Za-z]+$/;
+            let regex = /^[A-Za-z]{3,10}$/;
+
+            if(regex.test(user)) {
+                status.innerText = "valid input";
+                status.style.color = "green";
+            } else {
+                status.innerText = "invalid input or text length min 3 and max 10";
+                status.style.color = "orangered";
+            }
+        }
+   </script>
+</body>
+</html>

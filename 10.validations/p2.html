@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .body {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
+            overflow-x: hidden;
+        }
+
+        .box {
+            width: 100%;
+            border: 2px solid #ccc;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-item {
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px;
+            line-height: 3;
+        }
+
+        .form-input {
+            padding: 12px 14px;
+            width: 300px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .btn {
+            padding: 8px 10px;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            width: 150px;
+            color: #fff;
+            transition: all 0.4s;
+        }
+        .success { background-color: green;}
+        .btn:hover { background-color: #111;}
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="title">
+        <h1>Validating Email</h1>
+    </div>
+    <div class="box">
+         <form autocomplete="off" method="post" onsubmit="submitHandler(event)">
+            <div class="form-item">
+                <label for="mail">Your Email</label>
+                <input type="text" name="mail" id="mail" class="form-input">
+                <strong id="status"></strong>
+            </div>
+            <div class="form-item">
+                <input type="submit" value="Submit" class="btn success">
+            </div>
+         </form>
+    </div>
+   </div>
+
+   <script>
+        let fmail = document.getElementById("mail");
+        let status = document.getElementById("status");
+
+        function submitHandler(e) {
+            e.preventDefault();
+            let val = fmail.value;
+            console.log(`email = `, val)
+
+            //reg - string@string.string
+            let regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9-]+?\.[a-zA-Z]{2,10}$/;
+
+           if(val === "") {
+                status.innerText = "Email field should not be empty"
+                status.style.color = "orangered"
+           } else {
+                if(regex.test(val)) {
+                    status.innerText = "valid email id";
+                    status.style.color = "green";
+                } else {
+                    status.innerText = "invalid email id";
+                    status.style.color = "orangered";
+                }
+           }
+        }
+   </script>
+</body>
+</html>
