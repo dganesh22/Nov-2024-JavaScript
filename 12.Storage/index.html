@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Web Storages</h1>
+    <!-- 
+    browser memory
+        1. Cookie
+        2. LocalStorage
+            localStorage.setItem(key,value) - add the key value 
+            localStorage.getItem(key)- read the value
+            localStorage.removeItem(key) - delete single item
+            localStorage.clear() - to clear the entaire storage
+        3. Session Storage
+            sessionStorage.setItem(key,value)
+            sessionStorage.getItem(key)
+            sessionStorage.removeItem(key)
+            sessionStorage.clear()
+    -->
+
+   <form autocomplete="off" method="post" id="userform">
+        <div>
+            <label for="user">Your name</label>
+            <input type="search" name="user" id="user" required>
+        </div>
+
+        <div>
+            <input type="submit" value="Save">
+        </div>
+   </form>
+
+   <hr>
+
+   <button id="remove">Clear</button>
+   <h1 id="out"></h1>
+
+   <script src="./app1.js"></script>
+</body>
+</html>
